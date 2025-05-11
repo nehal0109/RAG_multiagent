@@ -1,19 +1,19 @@
-#add your huggingface token in .env file
 import os
 import requests
 from sympy import sympify, SympifyError
-from dotenv import load_dotenv
 from langchain_community.document_loaders import TextLoader
 from langchain.text_splitter import CharacterTextSplitter
 from langchain_community.vectorstores import FAISS
 from langchain_huggingface import HuggingFaceEmbeddings, HuggingFaceEndpoint
 from langchain.agents import initialize_agent, Tool
 from langchain.prompts import PromptTemplate
+import streamlit as st
 
-load_dotenv()
-
+# Use Streamlit secrets for Hugging Face API token
 if "HUGGINGFACEHUB_API_TOKEN" not in os.environ:
-    raise ValueError("Please set your HuggingFace API token in the .env file")
+    raise ValueError("Hugging Face API token not found in Streamlit secrets!")
+
+os.environ["HUGGINGFACEHUB_API_TOKEN"] = st.secrets["HUGGINGFACEHUB_API_TOKEN"]
 
 def load_documents(docs_folder="docs"):
     documents = []
