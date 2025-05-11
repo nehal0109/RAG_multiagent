@@ -1,0 +1,10 @@
+Product Name: SmartWatch Pro X2
+
+Display: 1.5" AMOLED Touchscreen
+Battery Life: Up to 10 days
+Water Resistance: IP68
+Connectivity: Bluetooth 5.2, GPS
+Sensors: Heart rate, SpO2, Accelerometer
+Compatibility: Android 8+ / iOS 12+
+
+Features include fitness tracking, call/message alerts, and sleep monitoring.
